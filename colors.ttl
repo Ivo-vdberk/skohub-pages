@@ -1,20 +1,21 @@
-@prefix colour: <https://example.org/colour/> .
+@prefix Hochschule: <https://example.org/hochschule/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-colour: a skos:ConceptScheme ;
-    dct:title "Colour Vocabulary"@en, "Farbvokabular"@de ;
-    dct:creator "Hans Dampf"@de ;
-    dct:created "2021-11-02"^^xsd:date ;
+Hochschule: a skos:ConceptScheme ;
+    dct:title "Institute for Higher Education"@en, "Hochschule"@de ;
+    dct:creator "Ivo"@de ;
+    dct:created "2024-09-10"^^xsd:date ;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-    skos:hasTopConcept colour:violet, colour:blue .
+    skos:hasTopConcept hochschule:Hochschulleitung, hochschule:Studium und Lehre .
 
-colour:violet a skos:Concept ;
-    skos:prefLabel "Violett"@de, "violet"@en;
-    skos:altLabel "Lila"@de, "purple"@en ;
-    skos:topConceptOf colour: .
+Hochschule:Hochschulleitung a skos:Concept ;
+    skos:prefLabel "Hochschulleitung"@de, "Higher Education Management"@en;
+    skos:altLabel "Hochschulmanagement"@de, "purple"@en ;
+    skos:topConceptOf hochschule: .
 
-colour:blue a skos:Concept ;
-    skos:prefLabel "Blau"@de, "blue"@en ;
-    skos:topConceptOf colour: .
+Hochschule:Studium und Lehre a skos:Concept ;
+    skos:prefLabel "Studium und Lehre"@de, "teaching and learning"@en ;
+    skos: altLabel "Hochschullehre" ;
+    skos:topConceptOf Hochschule: .
